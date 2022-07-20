@@ -1,5 +1,5 @@
 # TUVAL UI
-## HStack Usage
+## HStack
 Sorts objects or structures **horizontally**
 ``` 
 return ( 
@@ -13,7 +13,7 @@ return (
 ```
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/997405367338287104/unknown.png)
 
-## VStack Usage
+## VStack
 Sorts objects or structures **vertically**
 
 ```
@@ -28,7 +28,35 @@ return (
 ```
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/997407671495954493/unknown.png)
 
-## Text Usage
+
+## Height
+
+You can change the **height** of the views
+
+```
+return (
+    VStack(
+        Text("Hello World")
+    ).height(100).background(Color.aqua)
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999212799051968542/unknown.png)
+
+## Width
+
+You can change the **width** of the views
+
+```
+return (
+    VStack(
+        Text("Hello World")
+    ).width(100).background(Color.aqua)
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999213833514139648/unknown.png)
+
+
+## Text
 Creates a text block and you can shape it
 ```
 return ( 
@@ -78,27 +106,23 @@ return (
 ```
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/997424941907591178/unknown.png)
 
-
-
-
-# Örnek Kullanımlar
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
-
-
-
-
-```sh
-cd dillinger
-docker build -t <youruser>/dillinger:${package.json.version} .
+## Icons
+You can shape your design using the framework's unique large icon library.
 ```
+return (
+    VStack(
+        Icon(IconLibrary.Accessibility).size(70)
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999222267986845776/unknown.png)
+
+
+# Customize Shapes
+| Using | Forming |
+| ------ | ------ |
+| .size() | You can give value in integer format and change size |
+
 
 This will create the dillinger image and pull in the necessary dependencies.
 Be sure to swap out `${package.json.version}` with the actual
@@ -110,4 +134,9 @@ docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger
 ```
 
 > Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+
+
+
+
+
 
