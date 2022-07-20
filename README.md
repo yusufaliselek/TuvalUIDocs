@@ -1,7 +1,7 @@
 # TUVAL UI
 ## HStack
 Sorts objects or structures **horizontally**
-``` 
+``` sh
 return ( 
     HStack(
         VStack( 
@@ -16,7 +16,7 @@ return (
 ## VStack
 Sorts objects or structures **vertically**
 
-```
+```sh
 return ( 
     VStack( 
         HStack( 
@@ -33,7 +33,7 @@ return (
 
 You can change the **height** of the views
 
-```
+```sh
 return (
     VStack(
         Text("Hello World")
@@ -46,7 +46,7 @@ return (
 
 You can change the **width** of the views
 
-```
+```sh
 return (
     VStack(
         Text("Hello World")
@@ -56,9 +56,77 @@ return (
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999213833514139648/unknown.png)
 
 
+
+# Stack Customization
+## alignment
+By using alignment, you can place the child of the stack you are on at 9 points of the grid.
+```c
+return(
+    VStack({alignment: "hereAlignment" })(
+    )
+)
+```
+
+### cTop
+
+Center and top alignment
+```c
+return(
+    VStack({alignment: cTop})(
+        Text("Hello World")
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999265494123171941/unknown.png)
+
+### cTopLeading
+
+Left and top alignment
+```c
+return(
+    VStack({alignment: cTopLeading})(
+        Text("Hello World")
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999266055895662682/unknown.png)
+
+### cTopTrailing
+
+Right and top alignment
+```c
+return(
+    HStack({alignment: cTopTrailing})(
+        Text("Hello World")
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999267232897044581/unknown.png)
+
+### cLeading
+Center and left
+```c
+return(
+    HStack({alignment: cLeading})(
+        Text("Hello World")
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999271173034614814/unknown.png)
+### cTrailing
+Center and right
+```c
+return(
+    HStack({alignment: cTrailing})(
+        Text("Hello World")
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999271505475158016/unknown.png)
+
 ## Text
 Creates a text block and you can shape it
-```
+```sh
 return ( 
     VStack( 
         HStack( 
@@ -73,7 +141,7 @@ return (
 #### Text Customization
 ##### **Change Text Color** / .foregroundColor() 
 * You can change the color of the text using the .foregroundColor() property.
-```
+```sh
 return ( 
     VStack( 
         VStack( 
@@ -91,7 +159,7 @@ return (
 #### Text Background Color Customization
 ##### **Change Text Background Color** / .backgroundColor() 
 * You can change the background color of the text using the .backgroundColor() property.
-```
+```sh
 return ( 
     VStack( 
         VStack({spacing:10})( 
@@ -108,7 +176,7 @@ return (
 
 ## Icons
 You can shape your design using the framework's unique large icon library.
-```
+```sh
 return (
     VStack(
         Icon(IconLibrary.Accessibility).size(70)
