@@ -124,6 +124,30 @@ return(
 ```
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999271505475158016/unknown.png)
 
+## Spacing 
+Throws a space between each view except the space below the subview
+```c
+return (
+    HStack({ spacing: 50 })(
+        VStack({ spacing: 50 })(
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+        ),
+        VStack({ spacing: 50 })(
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+        ),
+        VStack({ spacing: 50 })(
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+            HStack().width(100).height(100).background("red"),
+        ),
+    )
+)
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001025020325281833/unknown.png)
 ## Text
 Creates a text block and you can shape it
 ```sh
@@ -184,6 +208,84 @@ return (
 )
 ```
 >![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/999222267986845776/unknown.png)
+
+## Padding
+Padding is used to create space around an element's content, inside of any defined borders.
+You have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+### Padding Top
+usage is .paddingTop(" ")
+```sh
+return (
+    VStack(
+        Text("This text has a top padding of 30 px")
+        .background("red").foregroundColor("white").paddingTop("30px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001035443992805376/unknown.png)
+
+### Padding Bottom
+usage is .paddingBottom(" ")
+```sh
+return (
+    VStack(
+        Text("This text has a bottom padding of 30 px")
+        .background("red").foregroundColor("white").paddingBottom("30px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001035815817850920/unknown.png)
+### Padding Right
+usage is .paddingRight(" ")
+```sh
+return (
+    VStack(
+        Text("This text has a right padding of 30 px")
+        .background("red").foregroundColor("white").paddingRight("30px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001036138091389028/unknown.png)
+
+### Padding Left
+usage is .paddingLeft(" ")
+```sh
+return (
+    VStack(
+        Text("This text has a left padding of 30 px")
+        .background("red").foregroundColor("white").paddingLeft("30px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001036837026017352/unknown.png)
+### Other Padding Usages
+#### Padding All
+usage is .padding(" ")
+```sh
+return (
+    VStack(
+        Text("This text has a top, bottom, left, and right padding of 30px.")
+        .background("red").foregroundColor("white").padding("30px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001041107796377671/unknown.png)
+
+#### Padding Left-Right Top-Bottom
+usage is .padding("TOPBOTTOMpx LEFTRIGHTpx")
+```sh
+return (
+    VStack(
+        Text("This text has a top and bottom padding of 25px, and a right and left padding of 50px.")
+        .background("red").foregroundColor("white").padding("25px 50px")
+    )
+).background("#fffff0")
+```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1001042329081221130/unknown.png)
+
+#### Padding Top Right-Left Bottom,
+usage is .padding("TOPpx LEFTRIGHTpx BOTTOMpx")
+
 
 
 # Customize Shapes
