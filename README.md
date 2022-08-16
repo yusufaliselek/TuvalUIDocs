@@ -1,4 +1,4 @@
-# TUVAL UI_
+# TUVAL UI
 ## HStack
 Sorts objects or structures **horizontally**
 ``` sh
