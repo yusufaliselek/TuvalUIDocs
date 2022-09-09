@@ -285,25 +285,29 @@ return (
 
 #### Padding Top Right-Left Bottom,
 usage is .padding("TOPpx LEFTRIGHTpx BOTTOMpx")
-
-
-
-# Customize Shapes
-| Using | Forming |
-| ------ | ------ |
-| .size() | You can give value in integer format and change size |
-
-
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-
 ```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
+return (
+    VStack(
+        Text("This text has a top padding of 25px, a right and left padding of 50px, and a bottom padding of 75px.")
+        .background("red").foregroundColor("white").padding("25px 50px 75px")
+    )
+).background("#fffff0")
 ```
+>![Tuval UI Playground](https://cdn.discordapp.com/attachments/997404959052148736/1015931989326565456/unknown.png)
 
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+# Components
+
+## Dropdown
+
+## Toggle
+
+## UIRoute
+
+### UIRouteLink
+
+## Navigator
+
+
 
 
 
